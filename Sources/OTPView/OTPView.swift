@@ -31,9 +31,7 @@ public struct OtpView:View {
                 .blendMode(.screen)
                 .focused($isKeyboardShowing)
                 .onChange(of: otpText) { newValue in
-                    if newValue.count == length {
-                        doSomething(newValue)
-                    }
+                    doSomething(newValue) 
                 }
                 .onAppear {
                     DispatchQueue.main.async {
